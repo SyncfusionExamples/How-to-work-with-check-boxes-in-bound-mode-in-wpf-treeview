@@ -1,10 +1,14 @@
-# How to work with check boxes in bound mode in WPF TreeView
+# How to Work With Check Boxes in Bound Mode in WPF TreeView?
 
 This repository describes how to work with check boxes in bound mode in [WPF TreeView](https://www.syncfusion.com/wpf-controls/treeview) (SfTreeView).
 
 When you are populating treeview nodes from [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeView.SfTreeView.html#Syncfusion_UI_Xaml_TreeView_SfTreeView_ItemsSource), then you can get or set the checked items by using [CheckedItems](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeView.SfTreeView.html#Syncfusion_UI_Xaml_TreeView_SfTreeView_CheckedItems) property.
 
 SfTreeView supports to check multiple items through binding the `CheckedItems` property from view model with `ObservableCollection<object>` type.
+
+**Note:** Set [ItemTemplateDataContextType](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeView.SfTreeView.html#Syncfusion_UI_Xaml_TreeView_SfTreeView_ItemTemplateDataContextType) as Node to bind the TreeViewNode.IsChecked property to CheckBox in ItemTemplate.
+
+**Note:** TreeView process and sets [TreeViewNode.IsChecked](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeView.Engine.TreeViewNode.html#Syncfusion_UI_Xaml_TreeView_Engine_TreeViewNode_IsChecked) based on CheckedItems only when you are binding ItemsSource.
 
 #### XAML
 
@@ -112,3 +116,5 @@ public class ViewModel : NotificationObject
     }
 }
 ```
+
+![Showing TreeView with check boxes in bound mode](TreeViewWithCheckBoxes.png)
